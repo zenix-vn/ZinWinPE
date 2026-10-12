@@ -1,0 +1,29 @@
+{
+  "name": "Win11-Pro-Bypass",
+  "title": { "vi-VN": "Windows 11 Pro - máy không đạt chuẩn (bỏ qua kiểm tra)", "en-US": "Windows 11 Pro - unsupported hardware (bypass)" },
+  "image": "ISO\\Windows\\install*.esd",
+  "edition": "*Windows 11 Pro*",
+  "os": "win11",
+  "requiresWin11": false,
+  "warning": "setup.warn_bypass",
+  "partition": { "mode": "Wipe", "style": "Auto" },
+  "drivers": true,
+  "netfx3": false,
+  "runSdio": true,
+  "wingetUpgrade": false,
+  "apps": ["UltraViewer", "Zalo"],
+  "unattend": {
+    "computerName": "*",
+    "localUser": "User",
+    "password": "",
+    "autoLogon": true,
+    "bypassNRO": true,
+    "preventDeviceEncryption": true,
+    "win11Bypass": true,
+    "timeZone": "SE Asia Standard Time",
+    "inputLocale": "0409:00000409",
+    "systemLocale": "vi-VN",
+    "uiLanguage": "en-US",
+    "userLocale": "vi-VN"
+  }
+}

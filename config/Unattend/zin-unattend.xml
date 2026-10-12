@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ZinWinPE unattend template (design 8.3 step 7 / 8.5). ZinSetup replaces the double-brace tokens from the
+  preset's "unattend" block and writes the result to W:\Windows\Panther\unattend.xml.
+  The image is applied directly (no setup.exe), so the windowsPE pass is not used.
+-->
+<unattend xmlns="urn:schemas-microsoft-com:unattend" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+  <settings pass="specialize">
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <ComputerName>{{COMPUTERNAME}}</ComputerName>
+      <TimeZone>{{TIMEZONE}}</TimeZone>
+    </component>
+    <component name="Microsoft-Windows-SecureStartup-FilterDriver" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <PreventDeviceEncryption>{{PREVENT_ENCRYPTION}}</PreventDeviceEncryption>
+    </component>
+  </settings>
+  <settings pass="oobeSystem">
+    <component name="Microsoft-Windows-International-Core" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      <InputLocale>{{INPUT_LOCALE}}</InputLocale>
+      <SystemLocale>{{SYSTEM_LOCALE}}</SystemLocale>
+      <UILanguage>{{UI_LANGUAGE}}</UILanguage>
+      <UserLocale>{{USER_LOCALE}}</UserLocale>
+    </component>
+    <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">
+      {{AUTOLOGON}}
+      {{FIRSTLOGON}}
+      <OOBE>
+        <HideEULAPage>true</HideEULAPage>
+        <HideOEMRegistrationScreen>true</HideOEMRegistrationScreen>
+        <HideOnlineAccountScreens>{{HIDE_ONLINE}}</HideOnlineAccountScreens>
+        <ProtectYourPC>3</ProtectYourPC>
+      </OOBE>
+      <UserAccounts>
+        <LocalAccounts>
+          <LocalAccount wcm:action="add">
+            <Name>{{USERNAME}}</Name>
+            <DisplayName>{{USERNAME}}</DisplayName>
+            <Group>Administrators</Group>
+            <Password>
+              <Value>{{PASSWORD}}</Value>
+              <PlainText>true</PlainText>
+            </Password>
+          </LocalAccount>
+        </LocalAccounts>
+      </UserAccounts>
+    </component>
+  </settings>
+</unattend>

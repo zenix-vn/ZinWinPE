@@ -1,0 +1,13 @@
+<!-- Office LTSC Professional Plus 2024 (volume), x64. Requires the customer's volume license key:
+     add <Product ...><... PIDKEY="XXXXX-..."> before use. Add SourcePath="." to install from the USB. -->
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2024">
+    <Product ID="ProPlus2024Volume">
+      <Language ID="en-us" />
+      <Language ID="vi-vn" />
+      <ExcludeApp ID="Lync" />
+    </Product>
+  </Add>
+  <Updates Enabled="TRUE" />
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>

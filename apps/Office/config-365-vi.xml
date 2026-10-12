@@ -1,0 +1,17 @@
+<!-- Office Deployment Tool: Microsoft 365 Apps for business, x64, en-US + vi-VN proofing/UI.
+     No SourcePath -> downloads from the Office CDN (design 8.7.4: online by default).
+     Uses the CUSTOMER's license; no activation tools are bundled. -->
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="Current">
+    <Product ID="O365BusinessRetail">
+      <Language ID="en-us" />
+      <Language ID="vi-vn" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+    </Product>
+  </Add>
+  <Property Name="SharedComputerLicensing" Value="0" />
+  <Property Name="AUTOACTIVATE" Value="0" />
+  <Updates Enabled="TRUE" />
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>

@@ -1,0 +1,31 @@
+# ZinWinPE GRUB2 theme - colours from design 6.6 (gold #DEB85C on #0E1016)
+desktop-image: "background.png"
+desktop-color: "#0E1016"
+title-text: ""
+message-font: "Unifont Regular 16"
+terminal-font: "Unifont Regular 16"
+
++ boot_menu {
+  left = 30%
+  top = 34%
+  width = 62%
+  height = 50%
+  item_font = "Unifont Regular 16"
+  item_color = "#E8E8E8"
+  selected_item_color = "#DEB85C"
+  item_height = 30
+  item_padding = 6
+  item_spacing = 4
+  scrollbar = true
+}
+
++ label {
+  left = 30%
+  top = 90%
+  width = 62%
+  align = "left"
+  id = "__timeout__"
+  text = "Auto boot in %d s"
+  color = "#DEB85C"
+  font = "Unifont Regular 16"
+}

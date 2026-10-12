@@ -1,0 +1,28 @@
+{
+  "name": "Win10-Pro-OldPC",
+  "title": { "vi-VN": "Windows 10 Pro / LTSC - máy cũ", "en-US": "Windows 10 Pro / LTSC - old PC" },
+  "image": "ISO\\Windows\\install*.esd",
+  "edition": "*Windows 10*",
+  "os": "win10",
+  "requiresWin11": false,
+  "partition": { "mode": "Wipe", "style": "Auto" },
+  "drivers": true,
+  "netfx3": false,
+  "runSdio": true,
+  "wingetUpgrade": false,
+  "apps": ["UltraViewer", "Zalo"],
+  "unattend": {
+    "computerName": "*",
+    "localUser": "User",
+    "password": "",
+    "autoLogon": true,
+    "bypassNRO": true,
+    "preventDeviceEncryption": true,
+    "win11Bypass": false,
+    "timeZone": "SE Asia Standard Time",
+    "inputLocale": "0409:00000409",
+    "systemLocale": "vi-VN",
+    "uiLanguage": "en-US",
+    "userLocale": "vi-VN"
+  }
+}

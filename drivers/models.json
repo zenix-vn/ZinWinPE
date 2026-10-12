@@ -1,0 +1,29 @@
+{
+  "_comment": "Models for vendor driver packs (package Full) + SDIO trimming. Patterns use PowerShell -like wildcards. See drivers/README.md.",
+  "dell": [
+    "Latitude 54?0", "Latitude 55?0", "Latitude 74?0", "Latitude 7?20", "Latitude 7?30", "Latitude 5?20", "Latitude 5?30", "Latitude 5?40",
+    "Latitude E54?0", "Latitude E74?0",
+    "Precision 35?0", "Precision 55?0",
+    "OptiPlex 30?0*", "OptiPlex 50?0*", "OptiPlex 70?0*"
+  ],
+  "hp": [
+    "HP EliteBook 840 G*", "HP EliteBook 850 G*", "HP EliteBook 830 G*",
+    "HP ProBook 440 G*", "HP ProBook 450 G*",
+    "HP EliteDesk 800 G*", "HP ProDesk 400 G*", "HP ProDesk 600 G*"
+  ],
+  "lenovo": [
+    "ThinkPad T4?0*", "ThinkPad T4?0s*", "ThinkPad T14 Gen *", "ThinkPad T14s Gen *",
+    "ThinkPad X2?0*", "ThinkPad X1 Carbon *", "ThinkPad E14*", "ThinkPad L14*",
+    "ThinkCentre M7?0*", "ThinkCentre M9?0*"
+  ],
+  "manualRules": [],
+  "sdio": {
+    "_comment": "lite = packs kept for the Lite package; exclude = packs never copied (old OS-only, printers, rare). Verify names against the current SDIO release.",
+    "lite": [
+      "DP_Chipset*", "DP_LAN*", "DP_WLAN*", "DP_MassStorage*", "DP_Touchpad*", "DP_CardReader*", "DP_USB*", "DP_Bluetooth*", "DP_Misc*"
+    ],
+    "exclude": [
+      "*_xp_*", "*-XP_*", "*_wxp_*", "*Printer*", "DP_Video_Server*", "DP_Modem*", "DP_TV*", "DP_xUSB*"
+    ]
+  }
+}

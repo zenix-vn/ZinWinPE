@@ -1,0 +1,28 @@
+{
+  "name": "Win11-Pro-Shop",
+  "title": { "vi-VN": "Windows 11 Pro - chuẩn cửa hàng", "en-US": "Windows 11 Pro - shop standard" },
+  "image": "ISO\\Windows\\install*.esd",
+  "edition": "*Windows 11 Pro*",
+  "os": "win11",
+  "requiresWin11": true,
+  "partition": { "mode": "Wipe", "style": "Auto" },
+  "drivers": true,
+  "netfx3": false,
+  "runSdio": true,
+  "wingetUpgrade": false,
+  "apps": ["UltraViewer", "Zalo"],
+  "unattend": {
+    "computerName": "*",
+    "localUser": "User",
+    "password": "",
+    "autoLogon": true,
+    "bypassNRO": true,
+    "preventDeviceEncryption": true,
+    "win11Bypass": false,
+    "timeZone": "SE Asia Standard Time",
+    "inputLocale": "0409:00000409",
+    "systemLocale": "vi-VN",
+    "uiLanguage": "en-US",
+    "userLocale": "vi-VN"
+  }
+}

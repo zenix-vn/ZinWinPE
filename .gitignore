@@ -1,0 +1,38 @@
+# --- Nguồn & kết quả build (không commit) ---
+out/
+iso-src/
+work/
+mnt/
+*.iso
+*.wim
+*.esd
+*.swm
+*.vhd
+*.vhdx
+
+# --- Bộ cài, công cụ, driver tải về ---
+packages/cache/
+apps/**/*.exe
+apps/**/*.msi
+apps/**/*.msix
+apps/**/*.ttf
+apps/**/Fonts/
+drivers/cache/
+drivers/store/
+*.cab
+*.7z
+*.zip
+
+# --- Khoá ký Secure Boot (TUYỆT ĐỐI không commit) ---
+*.key
+*.pem
+*.pfx
+*.p12
+boot/mok/
+
+# --- Hệ điều hành / editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+*.log
